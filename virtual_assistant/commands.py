@@ -4,17 +4,20 @@ import random
 from datetime import datetime
 
 def parse_command(command):
+    if 'open browser' in command:
+        open_application('chrome')
+        return "Opening Browser."
     if 'open calculator' in command:
         open_application('calc')
         return "Opening Calculator."
-    elif 'tell me a joke' in command:
+    if 'tell me a joke' in command:
         return tell_joke()
-    elif 'what time is it' in command:
+    if 'what time is it' in command:
         return f"The time is {get_current_time()}."
-    elif 'set reminder' in command:
+    if 'set reminder' in command:
         return "Reminder feature coming soon!"
-    elif 'exit' in command:
-        return "Goodbye!"
+    if 'exit' in command:
+        return "goodbye"
     else:
         return "I didn't understand that command."
 

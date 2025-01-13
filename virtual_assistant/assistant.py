@@ -10,7 +10,7 @@ def main():
             response = parse_command(command)
             speak(response)
         if 'exit' in command:
-            speak("Goodbye!")
+            speak("Goodbye")
             break
 
 if __name__ == "__main__":
